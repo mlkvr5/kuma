@@ -60,15 +60,6 @@ sudo ufw reload
 sudo apt update
 sudo apt install mariadb-server -y
 
-# MariaDB içinde aşağıdaki komutları çalıştır
-sudo mysql -u root -p <<EOF
-CREATE DATABASE uptime_kuma;
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Pr0s01_kuma';
-GRANT ALL PRIVILEGES ON uptime_kuma.* TO 'admin'@'localhost';
-FLUSH PRIVILEGES;
-EXIT;
-EOF
-
 # Daha sonra web'de giriş yap
 # (db name: admin)
 # Yeni sayfaya yönlendirilirsin, şifreyi iki kez girip tamamla
